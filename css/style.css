@@ -21,6 +21,7 @@ a {
 header {
     background: url(../img/background.png);
     background-size: cover;
+    background-attachment: fixed;
     width: 100%;
     font-family: 'Roboto', sans-serif;  
     color: var(--cinza);
@@ -33,6 +34,8 @@ header {
 
 #nome-ubr {
     padding-top: 100px;
+    padding-right: 15px;
+    padding-left: 15px;
 
 }
 
@@ -60,7 +63,7 @@ header {
 
 #menu ul li{
     border: 1px solid white;
-    padding: 25px 5px;
+    padding: 25px auto;
     margin-top: 45px;
 
 }
@@ -69,7 +72,20 @@ header {
     font-size: large;
     text-transform: uppercase;
     color: white;
+    display: block;
+    width: 280px;
+    line-height: 70px;
 }
+
+#menu li:hover {
+    background-color: white;
+    transition: 0.5s;
+}
+
+#menu a:hover {
+    color: var(--preto);
+}
+
 
 #footer {
     padding-top: 100px;
@@ -77,5 +93,9 @@ header {
     font-family: 'Roboto', sans-serif;
     line-height: 50px;
     text-transform: uppercase;
+}
+
+#menu {
+    border-bottom: 1px solid white;
 }
 
