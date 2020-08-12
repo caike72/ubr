@@ -18,6 +18,10 @@ a {
     margin-top: 300px;
 }
 
+body {
+    background-color: var(--preto);
+}
+
 header {
     background: url(../img/background.png);
     background-size: cover;
@@ -32,19 +36,19 @@ header {
 
 /* CORPO */
 
-#nome-ubr {
+#title {
     padding-top: 100px;
     padding-right: 15px;
     padding-left: 15px;
 
 }
 
-#nome-ubr h1 {
+#title h1 {
     font-size: 2em;
     text-transform: uppercase;
     padding: 25px;
     margin: 0 auto;
-    border: 2px solid white;
+    border: 1px solid white;
     display: inline-block; 
 }
 
@@ -86,7 +90,6 @@ header {
     color: var(--preto);
 }
 
-
 #footer {
     padding-top: 100px;
     text-align: center;
@@ -94,6 +97,20 @@ header {
     line-height: 50px;
     text-transform: uppercase;
 }
+
+#posts {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+#posts p{
+    padding-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    color: white; 
+}
+
 
 #menu {
     border-bottom: 1px solid white;
