@@ -1,0 +1,140 @@
+/* Root colors */
+
+:root {
+    --azul: #003C91;
+    --preto: #393B44;
+    --amarelo: #EFBA45;
+}
+
+/* Titles and subtitles */
+
+h2, h3, h4, h5, h6{
+    color: var(--azul);
+    text-transform: uppercase !important;
+    font-family: Montserrat !important;
+    font-style: normal !important;
+    font-weight: bold !important;
+}
+
+h1 {
+    font-size: 36px !important;
+    text-transform: uppercase !important;
+    font-family: Montserrat !important;
+    font-style: normal !important;
+    font-weight: bold !important;
+}
+
+h2 {
+    font-size: 30px !important;
+}
+
+h3 {
+    font-size: 28px !important;
+}
+
+h4 {
+    font-size: 26px !important;
+}
+
+h5 {
+    font-size: 24px !important;
+}
+
+h6 {
+    font-size: 22px !important;
+}
+
+#main-content p {
+    font-family: Nunito;
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+text-align: justify;
+color: var(--preto);
+}
+
+footer {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--azul);
+}
+
+header span {
+    text-transform: uppercase;
+    color: var(--amarelo);
+    font-weight: bold;
+}
+
+section {
+    background-color: white;
+}
+
+/* Other styles */
+
+#main-page-header{
+    height: 100vh;
+    background-color: var(--azul);
+    color: white !important;
+    padding-top: 15%;
+}
+
+#bottom-nav {
+    padding: 100px 0;
+}
+#main-content {
+    width: 55%;
+}
+
+header p{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+section ul{
+    list-style-type: none;
+}
+
+section li {
+    display: inline;
+    margin: 0 5px;
+}
+
+section li a{
+    list-style-type: none;
+    text-decoration: none !important;
+    color: var(--amarelo);
+    background-color: var(--azul);
+    padding: 10px 15px;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+section li a:hover {
+    background-color: var(--amarelo);
+    color: var(--azul);
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 600px) {
+    #bottom-nav {
+        text-align: center !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #bottom-nav {
+        text-align: center !important;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #main-content {
+        width:100%;
+    }
+}
+
