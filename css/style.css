@@ -61,6 +61,11 @@ footer {
     color: var(--azul);
 }
 
+footer a{
+    text-decoration: none;
+    color: var(--azul);
+}
+
 header span {
     text-transform: uppercase;
     color: var(--amarelo);
