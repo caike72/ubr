@@ -11,7 +11,7 @@
 h2, h3, h4, h5, h6{
     color: var(--azul);
     text-transform: uppercase !important;
-    font-family: Montserrat !important;
+    font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
     font-style: normal !important;
     font-weight: bold !important;
 }
@@ -19,7 +19,7 @@ h2, h3, h4, h5, h6{
 h1 {
     font-size: 36px !important;
     text-transform: uppercase !important;
-    font-family: Montserrat !important;
+    font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
     font-style: normal !important;
     font-weight: bold !important;
 }
@@ -46,11 +46,11 @@ h6 {
 
 #main-content p {
     font-family: Nunito;
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-text-align: justify;
-color: var(--preto);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: justify;
+    color: var(--preto);
 }
 
 footer {
@@ -61,15 +61,26 @@ footer {
     color: var(--azul);
 }
 
-footer a{
-    text-decoration: none;
-    color: var(--azul);
+header img {
+    border-radius: 3px;
 }
 
-header span {
+header a {
     text-transform: uppercase;
     color: var(--amarelo);
     font-weight: bold;
+    margin: 5px;
+}
+
+header a:hover {
+    margin: 5px;
+    color: var(--amarelo);
+}
+
+header p {
+    line-height: 1.4rem;
+    width: 40%;
+    margin: 0 auto;
 }
 
 section {
@@ -78,11 +89,10 @@ section {
 
 /* Other styles */
 
-#main-page-header{
-    height: 100vh;
+header {
     background-color: var(--azul);
     color: white !important;
-    padding-top: 15%;
+    padding: 10vw;
 }
 
 #bottom-nav {
@@ -99,26 +109,28 @@ header p{
     font-size: 24px;
 }
 
-section ul{
-    list-style-type: none;
+footer a {
+    text-decoration: none !important;
+    color: var(--azul);
 }
 
-section li {
-    display: inline;
-    margin: 0 5px;
+footer a:hover {
+    color: var(--amarelo) ;
 }
 
-section li a{
-    list-style-type: none;
+/* Buttons */
+.button {
     text-decoration: none !important;
     color: var(--amarelo);
     background-color: var(--azul);
     padding: 10px 15px;
     text-transform: uppercase;
     border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 5px;
 }
 
-section li a:hover {
+.button:hover {
     background-color: var(--amarelo);
     color: var(--azul);
 }
@@ -127,13 +139,8 @@ section li a:hover {
 
 @media only screen and (max-width: 600px) {
     #bottom-nav {
-        text-align: center !important;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    #bottom-nav {
-        text-align: center !important;
+        text-align: left !important;
+        width: 90%;
     }
 }
 
