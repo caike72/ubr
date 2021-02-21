@@ -1,83 +1,122 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
+
 <head>
-    <!-- Required meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UBR - Início</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="/styles/style.css">
 
-    <!-- Description -->
-    <meta name="Description" content="Participe da maior comunidade de geopolítica em forma de RPG do Brasil.">
-    
-    <!-- Custom JS File -->
-    <script src="js/index.js"></script>
+  <title>União Brasileira de Regiões</title>
+  <meta name="title" content="União Brasileira de Regiões">
+  <meta name="description" content="Participe da maior comunidade de geopolítica em forma de RPG do Brasil.">
 
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.png" type="image/x-icon"/>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel='stylesheet' href="css/style.css">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
+
 <body>
 
-    <header id="main-page-header" class="container-flex text-center align-middle">
-        <a href=""><img src="images/logo.svg" width="135px" alt="Logo do Site"></a>
-        <h1 class="py-3">União Brasileira de Regiões</h1>
-        <p class="pb-3 container">Grupo brasileiro de geoficção, worldbuilding e roleplay</p>
-        <a href="index.html">Home</a> / <a href="info.html">Info</a> / <a href="https://ubrwiki.miraheze.org/wiki/Constituição_da_União_Brasileira_de_Regiões">Constituição</a> / <a href="https://discord.gg/pqVzER3">Discord</a> / <a href="https://ubrwiki.miraheze.org/wiki/P%C3%A1gina_principal">Wiki</a>
+  <main>
+    <header>
+      <img src="/assets/logo.svg" alt="UBR logo">
+      <div>
+        <a class="site-title" href="#">União Brasileira de Regiões</a>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="/informacoes.html">Informações</a>
+          <a href="https://ubrwiki.miraheze.org/wiki/Constituição_da_União_Brasileira_de_Regiões">Constituição</a>
+          <a href="https://ubrwiki.miraheze.org/wiki/Página_principal">Wiki</a>
+          <a href="https://discord.gg/pqVzER3">Discord</a>
+        </nav>
+      </div>
     </header>
 
-    <section class="container mb-5" id="main-content">
-        <h2 class="pt-5">Bem-vindo(a)</h2>
-        <p>Bem-vindo(a)!
-            A UBR (União Brasileira de Regiões) é uma um grupo brasileiro de geoficção, worldbuilding e roleplay. A atual versão da UBR fora fundado como substituto do fórum SCity em 2017. A União Brasileira de Regiões possui uma longa história, tendo sido fundada em 2009 por usuários do SimCityBrasil (2004-2017) como uma forma de interação entre regiões do jogo. Desde sua criação, a UBR eventualmente caminhou para tornar-se uma espécie de roleplay de geopolítica entre as nações de seus membros, além de ter formado uma antiga comunidade com vínculo único de amizade.</p>
-
-        <h2 class="pt-5">Junte-se a nós</h2>
-        <p>A UBR se passa em um universo paralelo. O planeta Adalar, pouco menor que a terra e de propriedades similares, é o lar de todas as nações da UBR. Durante os anos, desde 2009, o mapa da UBR sofreu diversas alterações, experimentando e melhorando gradativamente. Quando um país entra para a UBR, é como se estivesse se tornando membro da Liga das Nações de Adalar. Para aprender mais sobre o funcionamento, regras e possibilidades reservadas aos membros da UBR, consulte a Constituição da União Brasileira de Regiões e as regras em nosso Discord!</p>
-
-        <h2 class="pt-5">A nossa comunidade</h2>
-        <p>Aqui na UBR você pode criar uma nação com culturas, histórias, governos e territórios próprios e customizáveis. Novos membros são sempre bem vindos em todas as épocas do ano, e amizades de anos florescem no nosso cantinho da internet. Venha conhecer a gente, crie seu país, sempre há um administrador ativo para lhe dar boas vindas!</p>
+    <section class="container">
+      <section class="info first-content">
+        <nav>
+          <ul>
+            <li><a onclick="changeToText1()" id="first-link">bem-vindo(a)</a></li>
+            <li><a onclick="changeToText2()" id="second-link">junte-se a nós</a></li>
+            <li><a onclick="changeToText3()" id="third-link">a nossa comunidade</a></li>
+          </ul>
+        </nav>
+        <p id="text">
+          Bem-vindo(a)! A UBR (União Brasileira de Regiões) é uma um grupo brasileiro de geoficção, worldbuilding e
+          roleplay. A atual versão da UBR fora fundada como substituta do fórum SCity em 2017. A União Brasileira de
+          Regiões possui uma longa história, tendo sido fundada em 2009 por usuários do SimCityBrasil (2004-2017) como
+          uma forma de interação entre regiões do jogo. Desde sua criação, a UBR eventualmente caminhou para tornar-se
+          uma espécie de roleplay de geopolítica entre as nações de seus membros, além de ter formado uma antiga
+          comunidade com vínculo único de amizade.
+        </p>
+      </section>
     </section>
 
-    <section class="pb-5">
-        <img src="images/map.png" alt="Mapa do mundo de Adalar" style="width: 100%;">
-    </section>
+    <section class="info">
+      <section class="side-1">
 
-    <<div class="container">
-        <div class="row">
-            <div class="col pb-3">
-                <h4>Gostou da ideia e quer saber mais?</h4>
-                <p class="lead">Entre em nosso grupo do Discord e converse com a gente!</p>
-                    <a class="button" href="info.html">Info</a>
-                    <a class="button" href="regras.html">Regras</a>
-                    <a class="button" href="https://discord.gg/pqVzER3">Discord</a>
-                    <a class="button" href="https://ubrwiki.miraheze.org/wiki/P%C3%A1gina_principal">Wiki</a>
-                     <div class="imagens">
-                        <img src="/images/Auberon.png" data-toggle="tooltip" data-placement="top" title="Auberon" alt="Country Ball de Auberon">
-                        <img src="/images/Kawsalpa.png" data-toggle="tooltip" data-placement="top" title="Kawsalpa" alt="Country Ball de Kawsalpa">
-                        <img src="/images/Wainui.png" data-toggle="tooltip" data-placement="top" title="Wainui" alt="Country Ball de Wainui" >
-                    </div>
-            </div>
-            <div class="col col-lg-4">
-                <iframe src="https://discordapp.com/widget?id=538569271500996608&theme=dark" width="350" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-            </div>
-          </div>
+        <h1 class="title">Conheça os países da união</h1>
+
+        <select name="Seletor de países" id="country-selector" onchange="selectCountry()">
+          <option value="">Selecione um país</option>
+          <option value="1">Kawsalpa</option>
+          <option value="0">Wainui</option>
+        </select>
+
+        <div class="country-info">
+          <h1>Nome: <span id="country-name">República de Kawsalpa</span></h1>
+          <h5>Capital: <span id="country-capital">Tayekbant</span></h5>
+          <h5>Continente: <span id="country-continent">Letânia Oriental</span></h5>
+          <h5>Linguas oficiais: <span id="country-language">Keruwa e Auber</span></h5>
+          <h5>População: <span id="country-population">28.038.982</span></h5>
         </div>
-    
-    <footer class="text-center pt-5 pb-3">
-        <span>© 2020 União Brasileira de Regiões |</span>
-        <span>Desenvolvido por <a class="font-weight-bold" href="http://caike72.github.io/" target="_blank">Caike Laurentino</a></span>
-    </footer>
 
-<!-- Bootstrap JS files -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <div class="country-img">
+          <p>Bandeira</p>
+          <img id="flag" src="https://static.miraheze.org/ubrwikiwiki/3/34/Kawsalpa.png" alt="bandeira">
+          <p>Mapa</p>
+          <img id="map" src="https://static.miraheze.org/ubrwikiwiki/d/d9/Kawsalpa_no_mundo.png" alt="globo com o país">
+        </div>
+
+      </section>
+
+      <section class="side-2">
+        <h1 class="title">Alguns de nossos eventos</h1>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit fugiat, nisi tempore doloribus magnam perferendis sit hic quibusdam ullam rem sint eligendi, sed ex, nihil repellat illo alias maxime dignissimos unde similique excepturi odit! Labore, in magnam asperiores mollitia ducimus earum sapiente repellat qui autem numquam rem sed sequi dolorem neque. Dolorem doloribus velit iste distinctio fugiat quo, iure labore obcaecati sit animi laborum ratione nihil earum reprehenderit mollitia id corporis accusamus magnam. Sequi, vero necessitatibus nemo facere eos fugiat, quis provident obcaecati exercitationem, molestiae ea aperiam repudiandae! Modi quos, ullam temporibus reprehenderit sed pariatur in consectetur? Aspernatur possimus libero veniam architecto, quis corporis quia. Doloribus fugit mollitia laudantium. Iusto aut, maxime aliquam eveniet at aliquid quisquam veritatis quaerat itaque unde distinctio necessitatibus quo quam ipsa neque, soluta molestias, perspiciatis consequuntur!
+        </p>
+
+        <p class="text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, iure optio ipsam iusto culpa cum similique recusandae. Explicabo nemo aliquid quod accusamus voluptate placeat unde, odio vel tempora iure provident molestias laborum molestiae eaque ipsam assumenda voluptates et illo adipisci, doloremque dolorem! Cupiditate unde fuga architecto officia, dolor quaerat nostrum.
+        </p>
+      </section>
+    </section>
+
+    <section class="container discord-field">
+      <div class="discord-logo">
+        <p>Junte-se a comunidade entrando no nosso servidor</p>
+        <img src="/assets/Discord-Logo+Wordmark-White.svg" target="_blank" href="https://discord.gg/pqVzER3"
+          alt="discord logo">
+      </div>
+
+      <div class="balls">
+        <img id="auberon" src="/assets/Auberon.png" data-toggle="tooltip" data-placement="top" title="Auberon"
+          alt="Country Ball de Auberon">
+        <img id="kawsalpa" src="/assets/Kawsalpa.png" data-toggle="tooltip" data-placement="top" title="Kawsalpa"
+          alt="Country Ball de Kawsalpa">
+        <img id="wainui" src="/assets/Wainui.png" data-toggle="tooltip" data-placement="top" title="Wainui"
+          alt="Country Ball de Wainui">
+      </div>
+    </section>
+
+    <div class="footer">
+      © <span id="year"></span> União Brasileira de Regiões | Desenvolvido por <a target="_blank"
+        href="http://caikelaurentino.com.br">Caike Laurentino</a>
+    </div>
+  </main>
+  <script src="index.js"></script>
 </body>
+
 </html>

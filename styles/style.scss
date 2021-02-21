@@ -1,0 +1,302 @@
+// Premades
+$lato: 'Lato',
+sans-serif;
+$poppins: 'Poppins',
+sans-serif;
+
+$blue: #003C91;
+$bluer: #033172;
+$white: #fff;
+$yellow: #EFBA45;
+$black: #000;
+
+//Reset
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $lato;
+}
+
+body {
+  background-color: $blue;
+  min-width: 320px;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1240px;
+  width: 100%;
+  background: $white;
+
+  //header  -----------------------------------------
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 1.5rem;
+
+      .site-title {
+        font-family: $poppins;
+        font-weight: 700;
+        color: $blue;
+        font-size: clamp(1.8rem, 3vw, 3rem);
+        text-decoration: none;
+        line-height: 2rem;
+        user-select: none;
+        padding-bottom: .190em;
+      }
+
+      nav a {
+        margin-right: 1.5rem;
+        line-height: 26px;
+        color: $blue;
+        font-family: $poppins;
+        font-weight: 400;
+        text-decoration: none;
+
+        &:hover {
+          color: $yellow;
+        }
+      }
+    }
+  }
+
+  // sections ------------------------------------------
+
+  section {
+    font-size: 1.230rem;
+
+    nav {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .container {
+    background-color: $yellow;
+  }
+
+  .side-1,
+  .side-2 {
+    width: 50%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+
+
+    #map {
+      width: 300px;
+    }
+
+    #flag {
+      width: 150px;
+      border-radius: 3px;
+    }
+
+    .country-img {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .title {
+    font-family: $poppins;
+
+    color: $blue;
+    font-size: 1.5em;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 4rem;
+
+    select {
+      width: 100%;
+      margin: 1rem 0;
+      padding: .5rem;
+      border-radius: 5px;
+    }
+
+    p {
+      margin: 1em 2em;
+      text-align: justify;
+    }
+
+    .text {
+      margin: 1rem 0;
+    }
+
+    li {
+      margin: 25px;
+      list-style-type: none;
+      cursor: pointer;
+
+      a {
+        display: block;
+        font-family: $poppins;
+        font-weight: 300;
+        width: 330px;
+        line-height: 70px;
+        font-size: clamp(1.4rem, 2.5vw, 1.5rem);
+        background-color: $blue;
+        color: $white;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        user-select: none;
+        border-radius: .20em;
+
+        &:hover {
+          background-color: $bluer;
+        }
+      }
+    }
+  }
+
+  .first-content {
+    align-items: center;
+  }
+
+  .discord-field {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: center;
+    align-items: center;
+    padding: 4em;
+    text-align: center;
+
+    justify-content: space-around;
+
+    .discord-logo {
+      img {
+        cursor: pointer;
+        width: 300px;
+      }
+    }
+
+    .balls {
+      img {
+        width: 150px;
+
+        &:hover {
+          animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+          transform: translate3d(0, 0, 0);
+          backface-visibility: hidden;
+          perspective: 1000px;
+        }
+
+        @keyframes shake {
+
+          10%,
+          90% {
+            transform: translate3d(0, -1, 0);
+          }
+
+          20%,
+          80% {
+            transform: translate3d(0, 2px, 0);
+          }
+
+          30%,
+          50%,
+          70% {
+            transform: translate3d(0, -4px, 0);
+          }
+
+          40%,
+          60% {
+            transform: translate3d(0, 6, 0);
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    text-align: center;
+    padding: 10px;
+    color: $blue;
+    font-weight: 700;
+
+    a {
+      text-decoration: none;
+      color: $bluer;
+    }
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  main {
+
+    .info {
+      padding: 2rem .9rem;
+
+      ul>li {
+        margin: .5rem;
+        display: block;
+      }
+
+      p {
+        margin: 1em;
+        font-size: 90%;
+      }
+    }
+  }
+
+  .side-1,
+  .side-2 {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  main {
+
+    .site-title,
+    nav {
+      display: none;
+    }
+
+    header {
+      background-color: $yellow;
+
+      img {
+        width: 40%;
+        margin: 0 auto;
+      }
+    }
+
+    .info {
+      flex-wrap: wrap;
+      padding: 1rem;
+
+      li>a {
+        width: 250px;
+        line-height: 50px;
+        font-size: 16px;
+      }
+    }
+
+    .side-1,
+    .side-2 {
+      width: 100%;
+    }
+
+    #wainui,
+    #kawsalpa {
+      display: none;
+    }
+  }
+}
