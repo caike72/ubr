@@ -3,7 +3,7 @@ document.getElementById("year").innerHTML = new Date().getFullYear();
 
 // Muda texto da primeira section quando clicado
 function changeToText1() {
-  document.getElementById('text').innerText = 'Bem-vindo(a)! A UBR (União Brasileira de Regiões) é uma um grupo brasileiro de geoficção, worldbuilding e roleplay. A atual versão da UBR fora fundado como substituto do fórum SCity em 2017. A União Brasileira de Regiões possui uma longa história, tendo sido fundada em 2009 por usuários do SimCityBrasil (2004-2017) como uma forma de interação entre regiões do jogo. Desde sua criação, a UBR eventualmente caminhou para tornar-se uma espécie de roleplay de geopolítica entre as nações de seus membros, além de ter formado uma antiga comunidade com vínculo único de amizade.'
+  document.getElementById('text').innerText = 'Bem-vindo(a)! A UBR (União Brasileira de Regiões) é um grupo brasileiro de geoficção, worldbuilding e roleplay. A atual versão da UBR fora fundada como substituta do fórum SCity em 2017. A União Brasileira de Regiões possui uma longa história, tendo sido fundada em 2009 por usuários do SimCityBrasil (2004 - 2017) como uma forma de interação entre regiões do jogo. Desde sua criação, a UBR eventualmente caminhou para tornar-se uma espécie de roleplay de geopolítica entre as nações de seus membros, além de ter formado uma antiga comunidade com vínculo único de amizade.'
 }
 
 function changeToText2() {
@@ -16,31 +16,44 @@ function changeToText3() {
 
 // Section dos países
 class ubrCountries {
-  constructor(name, capital, continent, language, flag, population, map) {
+  constructor(name, fullName, capital, continent, language, population) {
     this.name = name
+    this.fullName = fullName
     this.capital = capital
     this.continent = continent
     this.language = language
-    this.flag = flag
     this.population = population
-    this.map = map
   }
 }
 
 let ubrCountriesList = Array()
-ubrCountriesList.push(new ubrCountries('República de Wainui', 'Nunoa', 'Letânia Oriental', 'Kerwa Wainu', 'https://static.miraheze.org/ubrwikiwiki/0/03/Bandeira_de_Wainui.png', `19.315.788`, 'https://static.miraheze.org/ubrwikiwiki/d/d6/Wainui_no_mundo.png'))
-ubrCountriesList.push(new ubrCountries('República de Kawsalpa', 'Tayekbant', 'Letânia Oriental', 'Keruwa e Auber', 'https://static.miraheze.org/ubrwikiwiki/3/34/Kawsalpa.png', `28.038.982`, 'https://static.miraheze.org/ubrwikiwiki/d/d9/Kawsalpa_no_mundo.png'))
+ubrCountriesList.push(new ubrCountries('Auberon', 'União de Auberon', 'Alastaire', 'Astarte', 'Alto-aubérico', `57.271.680`))
+ubrCountriesList.push(new ubrCountries('Helgedoff', 'Províncias de Helgedoff', 'Culverfurl', 'Eucadia', 'Helgen', `78.894.185`))
+ubrCountriesList.push(new ubrCountries('Kawsalpa', 'Republica de Kawsalpa', 'Tayekbant', 'Letânia Oriental', 'Keruwa e Auber', `28.038.982`))
+ubrCountriesList.push(new ubrCountries('Ushktep', 'União do Ushktëp', 'Bïmesi', 'Astarte e Eucadia', 'Ndrita, hOuberi e Nemenoi', `40.883.114`))
+ubrCountriesList.push(new ubrCountries('Wainui', 'República de Wainui', 'Nunoa', 'Letânia Oriental', 'Kerwa Wainu', `19.315.788`))
+
+// Gera a lista de países
+var select = document.getElementById("selectCountry");
+
+for (var i = 0; i < ubrCountriesList.length; i++) {
+  var opt = ubrCountriesList[i].name;
+  var el = document.createElement("option");
+  el.textContent = opt;
+  el.value = (i);
+  select.appendChild(el);
+}
 
 // Seleciona país e envia para a section
 function selectCountry() {
-  const getCountry = (ubrCountriesList[document.getElementById('country-selector').value])
+  const getCountry = (ubrCountriesList[document.getElementById('selectCountry').value])
 
-  document.getElementById('country-name').innerHTML = getCountry.name
+  document.getElementById('country-fullname').innerHTML = getCountry.fullName
   document.getElementById('country-capital').innerHTML = getCountry.capital
   document.getElementById('country-continent').innerHTML = getCountry.continent
   document.getElementById('country-language').innerHTML = getCountry.language
   document.getElementById('country-population').innerHTML = getCountry.population
 
-  document.getElementById('flag').src = getCountry.flag
-  document.getElementById('map').src = getCountry.map
+  document.getElementById('flag').src = `/assets/flag/${getCountry.name}.png`
+  document.getElementById('map').src = `/assets/map/${getCountry.name}.png`
 }

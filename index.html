@@ -44,9 +44,9 @@
           </ul>
         </nav>
         <p id="text">
-          Bem-vindo(a)! A UBR (União Brasileira de Regiões) é uma um grupo brasileiro de geoficção, worldbuilding e
+          Bem-vindo(a)! A UBR (União Brasileira de Regiões) é um grupo brasileiro de geoficção, worldbuilding e
           roleplay. A atual versão da UBR fora fundada como substituta do fórum SCity em 2017. A União Brasileira de
-          Regiões possui uma longa história, tendo sido fundada em 2009 por usuários do SimCityBrasil (2004-2017) como
+          Regiões possui uma longa história, tendo sido fundada em 2009 por usuários do SimCityBrasil (2004 - 2017) como
           uma forma de interação entre regiões do jogo. Desde sua criação, a UBR eventualmente caminhou para tornar-se
           uma espécie de roleplay de geopolítica entre as nações de seus membros, além de ter formado uma antiga
           comunidade com vínculo único de amizade.
@@ -59,14 +59,12 @@
 
         <h1 class="title">Conheça os países da união</h1>
 
-        <select name="Seletor de países" id="country-selector" onchange="selectCountry()">
-          <option value="">Selecione um país</option>
-          <option value="1">Kawsalpa</option>
-          <option value="0">Wainui</option>
+        <select name="Seletor de países" id="selectCountry" onchange="selectCountry()">
+          <option>Selecione um país</option>
         </select>
 
         <div class="country-info">
-          <h1>Nome: <span id="country-name">República de Kawsalpa</span></h1>
+          <h1><span id="country-fullname">República de Kawsalpa</span></h1>
           <h5>Capital: <span id="country-capital">Tayekbant</span></h5>
           <h5>Continente: <span id="country-continent">Letânia Oriental</span></h5>
           <h5>Linguas oficiais: <span id="country-language">Keruwa e Auber</span></h5>
@@ -76,7 +74,7 @@
         <div class="country-img">
           <p>Bandeira</p>
           <img id="flag" src="https://static.miraheze.org/ubrwikiwiki/3/34/Kawsalpa.png" alt="bandeira">
-          <p>Mapa</p>
+          <p>Localização</p>
           <img id="map" src="https://static.miraheze.org/ubrwikiwiki/d/d9/Kawsalpa_no_mundo.png" alt="globo com o país">
         </div>
 
