@@ -31,7 +31,7 @@ ubrCountriesList.push(new ubrCountries('Auberon', 'União de Auberon', 'Alastair
 ubrCountriesList.push(new ubrCountries('Helgedoff', 'Províncias de Helgedoff', 'Culverfurl', 'Eucadia', 'Helgen', `78.894.185`))
 ubrCountriesList.push(new ubrCountries('Kawsalpa', 'Republica de Kawsalpa', 'Tayekbant', 'Letânia Oriental', 'Keruwa e Auber', `28.038.982`))
 ubrCountriesList.push(new ubrCountries('Ushktep', 'União do Ushktëp', 'Bïmesi', 'Astarte e Eucadia', 'Ndrita, hOuberi e Nemenoi', `40.883.114`))
-ubrCountriesList.push(new ubrCountries('Uttakham', 'Reino de Uttakham', 'Ja ahidah', 'Letânia Ocidental', 'Uttakh', `31.212.090`))
+ubrCountriesList.push(new ubrCountries('Uttakham', 'Reino de Uttakham', `Ja'ahidah`, 'Letânia Ocidental', 'Uttakh', `31.212.090`))
 ubrCountriesList.push(new ubrCountries('Wainui', 'República de Wainui', 'Nunoa', 'Letânia Oriental', 'Kerwa Wainu', `19.315.788`))
 
 // Gera a lista de países
