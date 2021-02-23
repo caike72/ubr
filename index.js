@@ -45,6 +45,19 @@ for (var i = 0; i < ubrCountriesList.length; i++) {
   select.appendChild(el);
 }
 
+// Coloca o primeiro país da lista no campo
+
+window.onload = function firstCountry() {
+  document.getElementById('country-fullname').innerHTML = ubrCountriesList[0].fullName
+  document.getElementById('country-capital').innerHTML = ubrCountriesList[0].capital
+  document.getElementById('country-continent').innerHTML = ubrCountriesList[0].continent
+  document.getElementById('country-language').innerHTML = ubrCountriesList[0].language
+  document.getElementById('country-population').innerHTML = ubrCountriesList[0].population
+
+  document.getElementById('flag').src = `/assets/flag/${ubrCountriesList[0].name}.png`
+  document.getElementById('map').src = `/assets/map/${ubrCountriesList[0].name}.png`
+}
+
 // Seleciona país e envia para a section
 function selectCountry() {
   const getCountry = (ubrCountriesList[document.getElementById('selectCountry').value])
