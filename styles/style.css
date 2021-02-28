@@ -66,6 +66,8 @@ main header div nav a {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   text-decoration: none;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 main header div nav a:hover {
@@ -112,6 +114,7 @@ main .side-1 #flag,
 main .side-2 #flag {
   width: 150px;
   border-radius: 3px;
+  border: 1px solid gainsboro;
 }
 
 main .side-1 .country-img,
@@ -173,20 +176,21 @@ main .info li {
 main .info li a {
   display: block;
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   width: 330px;
   line-height: 70px;
   font-size: clamp(1.4rem, 2.5vw, 1.5rem);
   background-color: #003C91;
   color: #fff;
   text-align: center;
-  text-transform: uppercase;
   text-decoration: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   border-radius: .20em;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 main .info li a:hover {

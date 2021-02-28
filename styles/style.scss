@@ -61,6 +61,7 @@ main {
         font-family: $poppins;
         font-weight: 400;
         text-decoration: none;
+        transition: all 300ms ease-in-out;
 
         &:hover {
           color: $yellow;
@@ -99,6 +100,7 @@ main {
     #flag {
       width: 150px;
       border-radius: 3px;
+      border: 1px solid gainsboro;
     }
 
     .country-img {
@@ -145,17 +147,17 @@ main {
       a {
         display: block;
         font-family: $poppins;
-        font-weight: 300;
+        font-weight: 500;
         width: 330px;
         line-height: 70px;
         font-size: clamp(1.4rem, 2.5vw, 1.5rem);
         background-color: $blue;
         color: $white;
         text-align: center;
-        text-transform: uppercase;
         text-decoration: none;
         user-select: none;
         border-radius: .20em;
+        transition: all 300ms ease-in-out;
 
         &:hover {
           background-color: $bluer;

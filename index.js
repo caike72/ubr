@@ -27,11 +27,15 @@ class ubrCountries {
 }
 
 let ubrCountriesList = Array()
+ubrCountriesList.push(new ubrCountries('Al-Aradmalik', 'Reino de Al-Aradmalik', `Ja'ahidah`, 'Letânia Ocidental', 'Sukkhãs', `31.212.090`))
 ubrCountriesList.push(new ubrCountries('Auberon', 'União de Auberon', 'Alastaire', 'Astarte', 'Alto-aubérico', `57.271.680`))
+ubrCountriesList.push(new ubrCountries('Dämiakären', 'República Dämiakärense', 'Müshiden', 'Astarte', 'Dämiak', `33.491.654`))
 ubrCountriesList.push(new ubrCountries('Helgedoff', 'Províncias de Helgedoff', 'Culverfurl', 'Eucadia', 'Helgen', `78.894.185`))
 ubrCountriesList.push(new ubrCountries('Kawsalpa', 'Republica de Kawsalpa', 'Tayekbant', 'Letânia Oriental', 'Keruwa e Auber', `28.038.982`))
+ubrCountriesList.push(new ubrCountries('Krasnaya', 'República Totalitarista de Krasnaya', 'Oslograd', 'Irrula', 'Krasnayo', `75.600.605`))
+ubrCountriesList.push(new ubrCountries('Kylmättä', 'Republica Federal de Kylmättä', '	Vosvamodan', 'Astarte', 'Mättä', `19.091.318`))
+ubrCountriesList.push(new ubrCountries('Sudvestia', 'Konungsríkið Suðvestanleiðs', 'Gullnaborg', 'Astarte', 'Islenþýskur', `10.000.000`))
 ubrCountriesList.push(new ubrCountries('Ushktep', 'União do Ushktëp', 'Bïmesi', 'Astarte e Eucadia', 'Ndrita, hOuberi e Nemenoi', `40.883.114`))
-ubrCountriesList.push(new ubrCountries('Uttakham', 'Reino de Uttakham', `Ja'ahidah`, 'Letânia Ocidental', 'Uttakh', `31.212.090`))
 ubrCountriesList.push(new ubrCountries('Wainui', 'República de Wainui', 'Nunoa', 'Letânia Oriental', 'Kerwa Wainu', `19.315.788`))
 
 // Gera a lista de países
@@ -55,7 +59,9 @@ window.onload = function firstCountry() {
   document.getElementById('country-population').innerHTML = ubrCountriesList[0].population
 
   document.getElementById('flag').src = `/assets/flag/${ubrCountriesList[0].name}.png`
+  document.getElementById('flag').setAttribute('alt', `Bandeira de ${ubrCountriesList[0].name}`)
   document.getElementById('map').src = `/assets/map/${ubrCountriesList[0].name}.png`
+  document.getElementById('map').setAttribute('alt', `Localização de ${ubrCountriesList[0].name}`)
 }
 
 // Seleciona país e envia para a section
@@ -69,5 +75,7 @@ function selectCountry() {
   document.getElementById('country-population').innerHTML = getCountry.population
 
   document.getElementById('flag').src = `/assets/flag/${getCountry.name}.png`
+  document.getElementById('flag').setAttribute('alt', `Bandeira de ${getCountry.name}`)
   document.getElementById('map').src = `/assets/map/${getCountry.name}.png`
+  document.getElementById('map').setAttribute('alt', `Localização de ${getCountry.name}`)
 }
