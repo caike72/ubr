@@ -18,6 +18,10 @@ main {
   background: #fff;
 }
 
+main .fa-bars {
+  display: none;
+}
+
 main header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,7 +63,7 @@ main header div .site-title {
   padding-bottom: .190em;
 }
 
-main header div nav a {
+main header div .menu a {
   margin-right: 1.5rem;
   line-height: 26px;
   color: #003C91;
@@ -70,7 +74,7 @@ main header div nav a {
   transition: all 300ms ease-in-out;
 }
 
-main header div nav a:hover {
+main header div .menu a:hover {
   color: #EFBA45;
 }
 
@@ -323,15 +327,55 @@ main .footer a {
 }
 
 @media only screen and (max-width: 700px) {
-  main .site-title,
-  main nav {
-    display: none;
+  main .fa-bars {
+    font-size: 2rem;
+    background: #003C91;
+    color: #fff;
+    display: block;
+    text-align: center;
+    padding: .5rem 0;
   }
   main header {
     background-color: #EFBA45;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main header div {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main header div .site-title {
+    display: none;
+  }
+  main header div .menu {
+    display: none;
+  }
+  main header div .menu a {
+    display: block;
+    background: #033172;
+    color: #fff;
+    padding: 1em;
+    font-size: 1rem;
+    text-decoration: none;
+    width: 100%;
   }
   main header img {
     width: 40%;
+    padding-top: 2rem;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
     margin: 0 auto;
   }
   main .info {

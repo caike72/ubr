@@ -1,3 +1,21 @@
+// Menu responsivo
+onresize = function () {
+  if (window.innerWidth > 700) {
+    document.querySelector(".menu").style.display = "block";
+  } else {
+    document.querySelector(".menu").style.display = "none";
+  }
+}
+
+function responsiveMenu() {
+  var x = document.querySelector(".menu");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
 // Atualiza o ano no rodapé
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
