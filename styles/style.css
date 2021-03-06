@@ -334,6 +334,7 @@ main .footer a {
     display: block;
     text-align: center;
     padding: .5rem 0;
+    cursor: pointer;
   }
   main header {
     background-color: #EFBA45;
